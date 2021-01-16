@@ -1,0 +1,9 @@
+<%# this passes an object which is a set of routes from devise. this makes it so you can create links to those routes wherever you need to inside the app component %>
+<%= react_component("App", {
+    logged_in: user_signed_in?,
+    sign_in_route: new_user_session_path,
+    sign_out_route: destroy_user_session_path,
+    sign_up_route: new_user_registration_path,
+    edit_profile_route: edit_user_registration_path,
+    current_user: current_user
+}) %>
